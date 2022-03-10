@@ -27,34 +27,31 @@ let salario = 3000.00; // apenas uma variavel, todos os calculos inseridos nela 
 
 //descontanto o valor do INSS
 
-if(salario < 1556.94){ // Salário bruto até R$ 1.556,94: alíquota de 8%
-salario = salario * 0.92; 
+if (salario < 1556.94) { // Salário bruto até R$ 1.556,94: alíquota de 8%
+    salario = salario * 0.92;
 }
-else if(salario < 2594.93){ // Salário bruto de R$ 1.556,95 a R$ 2.594,92: alíquota de 9%
-    salario = salario * 0.91; 
+else if (salario < 2594.93) { // Salário bruto de R$ 1.556,95 a R$ 2.594,92: alíquota de 9%
+    salario = salario * 0.91;
 }
-else if(salario < 5189.82){ // Salário bruto de R$ 2.594,93 a R$ 5.189,82: alíquota de 11%
- salario = salario * 0.89; 
+else if (salario < 5189.82) { // Salário bruto de R$ 2.594,93 a R$ 5.189,82: alíquota de 11%
+    salario = salario * 0.89;
 }
-else
-{ // Salário bruto acima de R$ 5.189,82: alíquota máxima de R$ 570,88
-    salario = -570,88
+else { // Salário bruto acima de R$ 5.189,82: alíquota máxima de R$ 570,88
+    salario = -570, 88
 }
-console.log(salario);
 
 // calculo do imposto de renda
-if(salario > 1903.98 && salario <= 2826.65 ){ // De R$ 1.903,99 a 2.826,65: alíquota de 7,5% e parcela de R$ 142,80 a deduzir do imposto
-    salario -= (salario * 0.075) - 142.8; 
+if (salario > 1903.98 && salario <= 2826.65) { // De R$ 1.903,99 a 2.826,65: alíquota de 7,5% e parcela de R$ 142,80 a deduzir do imposto
+    salario -= (salario * 0.075) - 142.8;
 }
- else if(salario >= 2826.66 && salario <= 3751.05){ // De R$ 2.826,66 a R$ 3.751,05: alíquota de 15% e parcela de R$ 354,80 a deduzir do imposto
+else if (salario >= 2826.66 && salario <= 3751.05) { // De R$ 2.826,66 a R$ 3.751,05: alíquota de 15% e parcela de R$ 354,80 a deduzir do imposto
 
     salario -= (salario * 0.15) - 354.80;
 }
-else if(salario >= 3751.06 && salario <= 4664.68 )
-{// De R$ 3.751,06 a R$ 4.664,68: alíquota de 22,5% e parcela de R$ 636,13 a deduzir do imposto
+else if (salario >= 3751.06 && salario <= 4664.68) {// De R$ 3.751,06 a R$ 4.664,68: alíquota de 22,5% e parcela de R$ 636,13 a deduzir do imposto
     salario -= (salario * 0.225) - 636.13;
 }
-else if (salario > 4664.68){// Acima de R$ 4.664,68: alíquota de 27,5% e parcela de R$ 869,36 a deduzir do imposto.
+else if (salario > 4664.68) {// Acima de R$ 4.664,68: alíquota de 27,5% e parcela de R$ 869,36 a deduzir do imposto.
     salario -= (salario * 0.275) - 869.36;
 }
 
